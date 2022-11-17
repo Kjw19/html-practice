@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>입력 양식 태그의 필드와 속성</title>
+</head>
+<body>
+<form action="do.jsp" method="get">
+  <fieldset>
+    <!--
+    fieldset : form을 그룹핑 하는역할
+    legend : 제목을 지정
+    -->
+  <legend>프로젝트 정보</legend>
+  <ul>
+    <li>
+      <!--
+      autofocus = 페이지 로드 시 자동 포커스
+      required = 입력 필수 지정
+      -->
+      <label for="name">이름</label>
+      <input type="text" name="name" id="name" required autofocus>
+    </li>
+    <li>
+      <!-- range : 슬라이드 막대로 표시하는 숫자 필드 -->
+      <label for="priority">중요도</label>
+      <input type="range" name="priority" id="priority"
+             min="5" max="10" value="0"
+             oninput="result.value=parseInt(priority.value)">
+      <!--output : 계산의 결과를 삽입-->
+      <output name="result"></output>
+    </li>
+    <li>
+      <!--number : 숫자 필드 -->
+      <label for="hours">예상 시간</label>
+      <input type="number" name="hours" id="hours" min="0" max="1000">
+    </li>
+    <li>
+      <label for="Start-date">날짜</label>
+      <input type="date" name="Start-date" id="Start-date">
+    </li>
+    <li>
+      <!--email field-->
+      <label for="email">이메일</label>
+      <input type="email" name="email" id="email">
+    </li>
+    <li>
+      <label for="UrlField">Url</label>
+      <input type="url" name="url" id="UrlField">
+    </li>
+    <li>
+      <!--  searchField-->
+      <label for="search">검색</label>
+      <input type="search" name="search" id="search">
+    </li>
+    <li>
+      <input type="submit" value="제출">
+    </li>
+  </ul>
+</fieldset>
+</form>
+
+</body>
+</html>

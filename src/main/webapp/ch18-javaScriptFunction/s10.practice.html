@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>실습</title>
+</head>
+<body>
+<script type="text/javascript">
+  function aveWeight(height, weight) {
+    var sum =(height - 100) * 0.9;
+    document.write('당신의 키는 ' + height + "<br>현재 몸무게는 " + weight +
+            '<br>적정 몸무게는 ' + sum);
+    if (weight > sum) {
+      document.write('<br>적정 몸무게 초과');
+    } else {
+      document.write("<br>정상")
+    }
+  }
+
+  var height = prompt("키 입력");
+  var weight = prompt("몸무게 입력");
+  aveWeight(height, weight);
+</script>
+
+</body>
+</html>

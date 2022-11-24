@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>객체의 속성 제거</title>
+</head>
+<body>
+<script type="text/javascript">
+  //빈 객체 생성
+  var student = {};
+
+  //객체에 속성 추가
+  student.이름 = '박문수';
+  student.나이 = 40;
+  student.나이 = '운동';
+  student.특기 = '달리기';
+
+  //객체에 메서드 추가
+  student.toString = function () {
+    var msg = '';
+    for (var key in this) {
+      msg += key + ':' + this[key] + '<br>';
+
+    }
+    return msg;
+  };
+
+  //객체의 속성 출력
+  document.write(student);
+  document.write('--------------<br>');
+
+  delete student.취미;
+
+  document.write(student);
+
+</script>
+
+</body>
+</html>

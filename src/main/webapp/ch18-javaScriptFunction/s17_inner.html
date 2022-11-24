@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>클로저</title>
+</head>
+<body>
+<script type="text/javascript">
+  /*지역변수를 남겨두는 현상을 클로저라고 함*/
+  function outerFunction(name) {
+    //변수 선언 및 초기화
+    var output = 'Hello' + name + '...!';
+    //내부 함수 반환
+    return function () {
+      alert(output);
+    };
+  }
+  //함수 호출
+  var result = outerFunction('홍길동');
+  //result에 저장된 내부함수 호출
+  result();
+</script>
+
+</body>
+</html>

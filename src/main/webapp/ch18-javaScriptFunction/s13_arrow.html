@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>화살표 함수</title>
+</head>
+<body>
+<script type="text/javascript">
+    /*ES6에서 도입된 화살표 함수(arrow Function)은 function키워드 대신 화살표(fat arrow => )를 사용해
+    좀 더 간략한 방법으로 함수를 선언할 수 있다. 화살표 함수는 항상 익명 함수로 정의한다.*/
+
+    //익명함수
+    var test = function () {
+        document.write('익명함수 <br>');
+    };
+    //함수 호출
+    test();
+
+    var print = (x) => {
+        document.write(x);
+    };
+    print(10);
+
+    document.write('------------------------------<br>');
+
+    var print2 = (x) => {
+        return x + 10;
+    };
+
+    var result = print2(20);
+    document.write(result + '<br>');
+
+    var print3= x => {
+        return x * 3;
+    };
+
+    var result2 = print3(30);
+    document.write(result2 + '<br>');
+    document.write('-------------------<br>');
+
+    var multi = (x, y) => {
+        return x + y;
+    };
+    var result3 = multi(3, 6);
+    document.write(result3 + '<br>');
+    document.write('-----------<br>');
+
+    //중괄호와  return을 생략하고 아래와 같이 명시하면 (x, y) => {return x*y};와 같음
+    var multi2 = (x, y) => x * y;
+
+    var result4 = multi2(2, 5);
+    document.write('익명함수<br>');
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

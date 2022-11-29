@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.item').css('color', 'orange');
+      $('h1.item').css('background', 'red');
+      //두개의 클래스를 모두 가지는 태그
+      $('.item.select').css('background', 'blue');
+    });
+  </script>
+</head>
+<body>
+<h1 class="item">Header-0</h1>
+<h2 class="item">Header-1</h2>
+<h1 class="item select">Header-2</h1>
+<h1 class="item">Header-3</h1>
+
+
+
+</body>
+</html>

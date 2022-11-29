@@ -22,8 +22,18 @@
   *
   * */
 
-  let window1 = window.open('http://www.naver.com', 'child', 'toolbar = no, location = no,status=no,menubar=no,resizeable = no, scrollbars=no, width=400, height=300');
-</script>
+  var win;
+function winOpen() {
+    win = window.open('http://www.naver.com', 'child', 'toolbar = no, location = no,status=no,menubar=no,resizeable = no, scrollbars=no, width=400, height=300');
+}
 
+  function winClose() {
+      win.close();
+
+  }
+
+</script>
+<input type="button" value="창 열기" onclick="winOpen()">
+<input type="button" value="창 닫기" onclick="winClose()">
 </body>
 </html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>script내에서 이벤트 연결 - onclick</title>
+  <style type="text/css">
+    div#header {
+      background-color: yellow;
+      display: inline;
+    }
+  </style>
+  <script type="text/javascript">
+    window.onload = function () {
+      var header = document.getElementById('header');
+
+      //이벤트 핸들러
+      function whenClick() {
+        alert('CLICK');
+      }
+
+      //이벤트 연결
+      //이벤트 연결된 것이 아니라 1회 함수를 실행한 후 함수가
+      //종료되기 때문에 이벤트 발생시 함수를 홀출할 수 없음
+      //header.onclick = whenClick();// 에러남
+
+      //이벤트 연결
+      //선언적 함수일 경우 이렇게 사용
+      //header.onclick = whenClick;
+
+      //익명함수 이벤트 연결
+      header.onclick = function () {
+        alert('클릭~~');
+      };
+
+    };
+
+  </script>
+
+</head>
+<body>
+<div id="header">클릭</div>
+
+</body>
+</html>

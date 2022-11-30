@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>attr()</title>
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //단수의 속성 제어
+/*
+            $('img').attr('width', function (index) {
+                return (index + 1) * 100;
+            });
+*/
+
+        //복수의 속성 제어
+            $('img').attr({
+                width: function (index) {
+                    return (index + 1) * 100;
+                }, height: function (index) {
+                    return (index + 1) * 100;
+                }
+            });
+        });
+
+    </script>
+</head>
+<body>
+<img src="../files/Penguins.jpg">
+<img src="../files/Koala.jpg">
+<img src="../files/landscape.jpg">
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>가변 인자 함수</title>
+</head>
+<body>
+<script type="text/javascript">
+  function test() {
+    for (var i = 0; i < arguments.length; i++) {
+      document.write('arguments [' + i + ']' + arguments[i] + '<br>');
+
+
+    }
+    document.write('--------------------<br>')
+    test(10, 20);
+    document.write('--------------------<br>');
+    test(10, 20, 30);
+  }
+</script>
+
+</body>
+</html>

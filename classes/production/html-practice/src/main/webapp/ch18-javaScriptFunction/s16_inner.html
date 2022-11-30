@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>내부함수</title>
+</head>
+<body>
+<script type="text/javascript">
+  function f() {
+    //번수 선인 및 초기화
+    var n = 123;
+    //내부 함수
+    function g() {
+      document.write('n is ' + n + '<br>');
+      document.write('g is called');
+    }
+    //내부 함수 반환
+    return g;
+  }
+
+  var m = f();
+  document.write(m + '<br>');
+  document.write('------------------<br>');
+
+  //m에 저장되어 있는 함수 실행
+  m();
+
+</script>
+
+</body>
+</html>

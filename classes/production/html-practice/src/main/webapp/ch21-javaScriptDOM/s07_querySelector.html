@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>querySelector()</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var header1 = document.querySelector('#header_1');
+            var header2 = document.querySelector('#header_2');
+
+            header1.innerHTML = '하하';
+            header2.innerHTML = '호호';
+
+            var list = document.querySelector('li');
+            list.style.color = 'red';
+        };
+    </script>
+</head>
+<body>
+  <h1 id="header_1">header</h1>
+  <h1 id="header_2">header</h1>
+
+  <ul>
+      <li>Apple</li>
+      <li>Banana</li>
+      <li>Orange</li>
+  </ul>
+
+
+</body>
+</html>

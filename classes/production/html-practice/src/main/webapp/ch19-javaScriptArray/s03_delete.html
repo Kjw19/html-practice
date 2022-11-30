@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>배열의 요소 삭제</title>
+</head>
+<body>
+<script type="text/javascript">
+  //배열생성
+  var array = ['oen', 'two', 'three'];
+
+  array.length = 2;//마지막 데이터 제거
+
+
+  //배열요소 목록
+  document.write(array + '<br>');
+
+
+
+  array.length = 4;
+  document.write(array + '<br>');
+  document.write('--------------------<br>');
+
+  //배열의생성
+  var array2 = ['포도', '사과', '귤'];
+
+  delete array2[1];//제거한 위치에 빈 요소를 남김
+  document.write(array2 + '<br>');
+  document.write('--------------------<br>');
+
+
+//배열의생성
+  var array3 = ['포도', '사과', '귤', '망고'];
+
+  //인뎃스 2에 해당하는 요소부터 하나의 요소를 제거하고 제거된 곳을 메움
+  array3.splice(2, 1);
+  document.write(array3 + '<br>');
+  document.write('--------------------<br>');
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html(), text()</title>
+  <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('div').html('<h1>겨울날씨 !!!! </h1>');
+
+      //텍스트로만 처리
+      $('p').html('<h1>놀이동산의 곰인형</h1>');
+
+      $('.space').html(function (index) {
+        return '<h2>Header-' + index + '</h2>';
+      });
+
+      //태그의 내용을 읽어와서 내용을 새롭게 가공
+      $('h1').html(function (index, html) {
+        //index : 배열의 인덱스
+        //html : 배열에 저장되어 있는 태그의 내용
+        return '**' + html + '**';
+      });
+    });
+  </script>
+</head>
+<body>
+  <div></div>
+  <p></p>
+<hr width="90%" size="1" noshade="noshade">
+<div class="space"></div>
+<div class="space"></div>
+<div class="space"></div>
+
+<hr width="90%" size="1" noshade="noshade">
+<h1>제목-1</h1>
+<h1>제목-2</h1>
+<h1>제목-3</h1>
+</body>
+</html>

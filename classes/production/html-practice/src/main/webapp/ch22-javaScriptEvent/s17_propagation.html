@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트 전파</title>
+  <script type="text/javascript">
+    /*
+    * 이벤트 전파(전달) : 특정 태그에서 이벤트가 발생하면 상위 태그
+    * 또는 하위태그로 이벤트가 전달되는 현상
+    * */
+    window.onload = function () {
+      document.getElementById('div').onclick = function () {
+        alert('div');
+        this.style.background = 'pink';
+      };
+
+      document.getElementById('paragraph').onclick = function () {
+        alert('photograph');
+        this.style.background = 'yellow';
+
+        //이벤트 전파를 막으려면 이벤트 핸들러에 매개변수를 이용해서
+        //event 객체를 전달받고 event 객체의 stopPropagation() 메서드를
+        //사용해서 이벤트 전파를 막을 수 있다.
+        event.stopPropagation();
+      };
+    };
+  </script>
+</head>
+<body>
+<div id="div">div
+  <p id="paragraph">Paragraph</p>
+</div>
+
+</body>
+</html>

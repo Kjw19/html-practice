@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>parseInt(), parseFloat()</title>
+</head>
+<body>
+<script type="text/javascript">
+  var num = '1234';
+  var won = '1000원';
+  var won2 = '원1000';
+
+
+  document.write(Number(num) + '<br>'); // String --> Number
+  document.write(parseInt(num) + '<br>'); //String --> Number
+
+  document.write(Number(won) + '<br>');//NaN
+  document.write(parseInt(won) + '<br>');//1000, 앞에 숫자를 추출해서 형변환
+  document.write(parseInt(won2) + '<br>');//NaN
+
+  var num2 = '24.56';
+  var dollar = '1.5$';
+  var dollar2 = '$1.5';
+
+  document.write(Number(num2) + '<br>'); // String --> Numebr 24.56
+  document.write(parseFloat(num2) + '<br>'); // String --> Number 24.56
+
+  document.write(Number(dollar) + '<br>'); // NaN
+  document.write(parseFloat(dollar) + '<br>'); // 1.5 앞의 숫자를 추출해서 형변환
+
+  document.write(Number(dollar2) + '<br>'); // NaN
+  document.write(parseFloat(dollar2) + '<br>');// NaN
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>removeClass()</title>
+    <style type="text/css">
+        .item {
+            color: red;
+        }
+        .select {
+            background: yellow;
+        }
+    </style>
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        //3초후에 select 클래스를 제거
+        setTimeout(function () {
+            $('h1').removeClass('select');
+        }, 3000);
+    </script>
+</head>
+<body>
+<h1 class="item">Header-0</h1>
+<h1 class="item select">Header-1</h1>
+<h1 class="item">Header-2</h1>
+
+</body>
+</html>

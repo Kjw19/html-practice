@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>append()</title>
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //배열 생성
+            var content = [
+                {name: '홍길동', region: '서울시'},
+                {name: '박문수', region: '부산시'},
+                {name: '장영실', region: '인천시'},
+            ];
+
+            var output = '';
+            $.each(content, function (index, item) {
+                output += '<p>';
+                output += '<h2>' + item.name + '</h2>';
+                output += '<span>' + item.region + '</span>';
+                output += '</p>';
+            });
+
+            $('#output').append(output);
+        });
+    </script>
+</head>
+<body>
+<div id="output">
+
+</div>
+
+</body>
+</html>

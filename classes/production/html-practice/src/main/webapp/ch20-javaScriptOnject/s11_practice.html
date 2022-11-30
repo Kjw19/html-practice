@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>실습</title>
+</head>
+<body>
+<script type="text/javascript">
+
+  var array = [];
+
+  var a = prompt("첫 번째 숫자");
+  var b = prompt("두 번째 숫자");
+  var c = prompt("세 번째 숫자");
+  var d = prompt("네 번째 숫자");
+  var e = prompt("다섯 번째 숫자");
+
+  array.push(Number(a),Number(b),Number(c),Number(d),Number(e));
+
+  function maxCheck() {
+      min = array[0];
+      for (var j = 1; j < array.length; j++) {
+          if (min < array[j]){
+              min = array[j];
+          }
+      }
+      document.write(min+ '<br>');
+  }
+
+  function minCheck() {
+      max = array[0];
+      for (var i = 1; i < array.length; i++) {
+          if (max > array[i]){
+              max = array[i];
+          }
+      }
+      document.write(max + '<br>');
+  }
+
+  maxCheck();
+  minCheck();
+
+</script>
+
+</body>
+</html>

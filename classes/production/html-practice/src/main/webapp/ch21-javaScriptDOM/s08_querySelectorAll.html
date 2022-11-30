@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>querySelectorAll</title>
+</head>
+<body>
+<ul>
+  <li>Apple</li>
+  <li>Banana</li>
+  <li>Orange</li>
+</ul>
+
+<script type="text/javascript">
+  let elems = document.querySelectorAll('ul > li');
+
+  elems[0].style.background = 'yellow';
+  elems[1].style.color = 'blue';
+  for (let i = 0; i < elems.length; i++) {
+    document.write(elems[i].innerHTML + '<br>');
+
+  }
+  document.write('----------------<br>');
+
+  elems.forEach(function (item) {
+    document.write(item.innerHTML + '<br>');
+  });
+  elems.forEach(function (item) {
+    item.style.border = '1px solid red';
+  })
+</script>
+</body>
+</html>

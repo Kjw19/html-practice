@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>실습</title>
+</head>
+<body>
+<script type="text/javascript">
+  var score = [80, 70, 60, 55, 45];
+  var sum = 0;
+
+  function getSum() {
+    for (var i = 0; i < score.length; i++) {
+      sum = Number(sum) + Number(score[i]);
+    }
+    return sum;
+
+  }
+  function getAvg(sum) {
+    return sum / 5;
+  }
+  document.write('총점 = ' + getSum() + '<br>');
+  document.write('평균 = ' + getAvg(sum));
+
+
+</script>
+
+</body>
+</html>

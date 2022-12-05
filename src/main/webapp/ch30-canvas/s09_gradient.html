@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script type="text/javascript">
+    window.onload = function () {
+
+      let canvas = document.getElementById("canvas");
+      if (canvas.getContext) {
+        let context = canvas.getContext('2d');
+
+        //선형 그라디언트
+        //createLineGradient(x1, y1, x2, y2) : 시작점 (x2, y1).과
+        //끝점 (x2,y2)을 지정하여 그라디언트 영역 만듬
+        let grad = context.createLinearGradient(0, 0, 0, 200);
+
+        //addColorStop(position, color) : position은 그라디언트
+        //에서 색상의  위치를 상대적으로 표시하는것으로, 사용할 수 있는
+        //값은 0.0에서 1.0까지 0.0과 1.0위치에서의 색상만 지정해
+        //주면 두 색상사이의 중간 색상은 알아서 계산해서 그라디언트를
+        //만들어 준다
+        grad.addColorStop(0, '#39c');
+        grad.addColorStop(1, 'orange');
+
+        //만들어진 그라디언트 색상으로 적용
+        context.fillStyle = grad;
+        context.fillRect(0, 0, 200, 200);
+
+
+
+      } else {
+        alert('브라우저를 캔버스가 지원하지 않습니다.')
+      }
+    };
+  </script>
+  <title>canvas</title>
+</head>
+<body>
+<canvas id="canvas" width="500" height="300"></canvas>
+
+</body>
+</html>

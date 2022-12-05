@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>dialog()</title>
+  <link rel="stylesheet" href="../css/jquery-ui.min.css">
+  <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      $('#dialog').dialog({
+        resizeable: false,
+        modal: true,
+        height: 200,
+        buttons: {
+          'Delete all items': function () {
+            $(this).dialog('close'); //다이얼로그 닫기
+          },
+          cancel: function () {
+            $(this).dialog('close');
+          },
+        }
+      });
+
+    });
+  </script>
+</head>
+<body>
+<div id="dialog" title="모달창 구현하기">
+  <p>JqueryUI를 이용해서 모달창 구현하기</p>
+</div>
+
+  <p>JqueryUI는 다양한 UI 처리 메서드를 제공합니다.</p>
+</body>
+</html>
+

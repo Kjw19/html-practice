@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>file</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            //파일을 선택할 때
+            document.getElementById('file').onchange = function () {
+                //선택한 파일의 file 객체 얻기
+                //input type="file" 를 이용해서 file을 선택할 떄
+                //태그에 multiple 속성을 지정하면 복수의 파일을 선택할 수 있기 때문에
+                //자바 스크립트는 파일 정보를 배열에 보관함
+                //하나의 파일을 선택한 경우는 배열의 첫번째(0) 인덱스로 부터
+                //파일 객체를 반환함
+                let file = this.files[0];
+
+                //파일의 이름 출력
+                alert(file.name + '을 선택했습니다.');
+            };
+
+            //버튼 이벤트 연결
+            document.getElementById('btnStart').onclick = function () {
+                //선택한 파일에 대한 정보를 읽기
+                let file = document.getElementById('file').files[0];
+
+                if (!file) { // = fule == undefined
+                    alert('파일을 선택하세요!');
+                    return;
+
+                }
+                document.getElementById('filename').textContent = file.name;
+                document.getElementById('filesize').textContent = '(' + file.size + 'bytes)';
+                document.getElementById('filetype').textContent = file.type;
+                document.getElementById('filedate').textContent = file.lastModified.toLocaleString();
+
+                //선택한 인코딩 방식 출력
+                let encodeList = document.getElementById('encoding');
+                let encodoing = encodeList.value;
+                alert(encodoing);
+
+                let reader = new FileReader();
+
+                reader.readAsText(file, encodoing);
+                //파일 읽기가 완료되면 이벤트 호출
+                reader.onload = function () {
+                    //textarea 호출
+                    let disp = document.getElementById('contents');
+                    disp.value = reader.result;//읽어들인 내용 출력
+                };
+
+                //파일의 내용 읽기
+            };
+        };
+    </script>
+</head>
+<body>
+<h2>현재 시스템의 파일 읽기</h2>
+<input type="file"  id="file" accept="text/*">
+<select id="encoding">
+  <option>EUC-KR</option>
+  <option>UTF-8</option>
+</select>
+<button id="btnStart">읽기</button>
+<br>
+<div>
+  <span id="filename">파일명</span>
+  <span id="filesize">파일크기</span>
+  <span id="filetype">파일타입</span>
+  <span id="filedate">파일의 마지막 갱신 일시</span>
+</div>
+<textarea rows="10" cols="50" id="contents" readonly="readonly">
+
+</textarea>
+
+</body>
+</html>
